@@ -1,30 +1,20 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-choose_colour_button = [
-    [
-        {
-            "text": "🔵",
-            "callback_data": "colour_red"
-        }, {
-            "text": "🟡",
-            "callback_data": "colour_orange"
-        }, {
-            "text": "🟢",
-            "callback_data": "colour_green"
-        }
-    ],
-    [
-        {
-            "text": "🟣",
-            "callback_data": "colour_blue"
-        }, {
-            "text": "🟠",
-            "callback_data": "colour_purple"
-        }, {
-            "text": "🔴",
-            "callback_data": "colour_black"
-        }
-    ]
-]
 
-choose_colour_button = InlineKeyboardMarkup(inline_keyboard=choose_colour_button)
+numbers_button = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text="1", callback_data="1"),
+            InlineKeyboardButton(text="2", callback_data="2"),
+            InlineKeyboardButton(text="3", callback_data="3"),
+            InlineKeyboardButton(text="4", callback_data="5"),
+        ],
+        [
+            InlineKeyboardButton(text="5", callback_data="5"),
+            InlineKeyboardButton(text="6", callback_data="6"),
+            InlineKeyboardButton(text="7", callback_data="7"),
+            InlineKeyboardButton(text="8", callback_data="8"),
+        ]
+    ]
+)
+
