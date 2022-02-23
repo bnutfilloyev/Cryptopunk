@@ -37,7 +37,7 @@ texts = {
                        "<b>🎨Colour</b>: {}\n"
                        "<b>📝Comment</b>: {}\n",
 
-    'get_user_id': "Please send us your <b>Telegram ID</b> so we can send you your CryptoPunk.",
+    'get_user_id': "Please send us <b>Telegram ID</b> of client  we can send your CryptoPunk.",
     'get_photo': "Please send PHOTO  face.",
     'send_user': "Photo sent! 🙌\n\n"
 }
