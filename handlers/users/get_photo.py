@@ -28,11 +28,10 @@ async def get_photo_3(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['photo2_id'] = message.photo[-1].file_id
 
-    user_db.insert_one({
-        'id': message.from_user.id,
+    user_db.update_one({'id': message.from_user.id}, {'$set': {
         'photo1_id': data['photo1_id'],
         'photo2_id': data['photo2_id'],
-    })
+    }}, upsert=True)
 
     await message.answer_photo(photo=COLOR_IMAGE, caption=texts['change_background'], reply_markup=numbers_button)
     await Form.Colour.set()
